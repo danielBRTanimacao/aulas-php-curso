@@ -7,5 +7,10 @@
 </head>
 <body>
     <h1>Teste</h1>
+    <?php 
+    
+        echo "novos Testes"
+
+    ?>
 </body>
 </html>
