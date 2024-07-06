@@ -33,9 +33,23 @@
             
         // // }
 
+        // class Person {
+        //     private string $name;
+        // }
+
+        // $person = new Person();
+    
         class Person {
             private string $name;
+
+            public function showName(){
+                return $this->name;
+            }
         }
+
+        $random_person = new Person();
+
+        $random_person->showName();
     ?>
 </body>
 </html>
