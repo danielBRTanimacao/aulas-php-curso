@@ -11,8 +11,26 @@
     <h2 class="lead">Fazendo alguns testes</h2>
 
     <?php 
-        $str_var = "String para ser editada";
-        echo $str_var;
+        // existe interpretação no conteudo
+        $course = "Curso ";
+        $language = "PHP \u{1F418}";
+        // Não a uma interpretação no conteudo
+        $language2 = 'Python \u{1F596}';
+
+        const STATE = "PE"; 
+        $name = 'Daniel';
+        $last_name = "Tenório \u{1F596}";
+        echo "<p>" . $course . $language . $language2 . "</p>";
+        echo "<p>" . date('Y') . " Olá me chamo $name $last_name moro no estado de " . STATE . "</p>";
+        echo "<p>Meu apelido é \"Mamute\"</p>"
+        // Escapes de sequencia
+        /*
+            \n = Nova linha
+            \t = Tabulação horizontal
+            \\ = Barra invertida
+            \$ = Sinal cifrão
+            \u{} = Code point unicode
+        */
     ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
