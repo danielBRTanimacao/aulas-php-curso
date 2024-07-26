@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio 01</title>
+    <title>Desafio 01 result</title>
     <style>
         * {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -16,26 +16,21 @@
             flex-direction: column;
         }
         h1, h2, h3 {text-align: center;}
-        form {
-            padding: 10px;
-            display: flex;
-            gap: 10px;
-            flex-direction: column;
-        }
-        input {
-            padding: 10px 1rem;
-        }
     </style>
 </head>
 <body>
-    <h1>Desafio 01</h1>
+    <h1>Desafio 01 resultado</h1>
     <main>
         <h2>Desafio Antecessor e Sucessor</h2>
-        <form action="result.php" method="get">
-            <label for="q">Digite um numero:</label>
-            <input type="number" name="q" id="numberId">
-            <input type="submit" value="Enviar">
-        </form>
+        <div>
+            <?php 
+                $q_value = $_GET['q'];
+                echo "<p>O número digitado foi $q_value</p>";
+                echo "<p>O seu ANTECESSOR é ". $q_value - 1 ."</p>";
+                echo "<p>Já o seu SUCESSOR é ". $q_value + 1 ."</p>";
+                echo "<p><a href=\"./des1.php\">VOLTAR</a></p>";
+            ?>
+        </div>
     </main>
 </body>
 </html>
