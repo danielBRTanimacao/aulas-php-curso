@@ -8,4 +8,4 @@ Você sempre quis aprender PHP e nunca achou um curso com as novidades das últi
 
 -   [Link do Xampp 🔨](https://www.apachefriends.org/pt_br/index.html)
 
-![Curso-em-video-img](image.png)
+![Curso-em-video-img](./img/image.png)
