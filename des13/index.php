@@ -44,11 +44,15 @@
         <h2>Saque de R$<?=number_format($w_value, 2, ',', '.')?> realizado</h2>
         <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
             <?php
-                $cent = 0;
-                $fift = 0;
-                $twenty = 0;
-                $ten = 0;
-                $five = 0;
+
+                $cent = floor($w_value / 100);
+                $w_value %= 100;
+                $fift = floor($w_value / 50);
+                $w_value %= 50;
+                $ten = floor($w_value / 10);
+                $w_value %= 10;
+                $five = floor($w_value / 5);
+                $w_value %= 5;
                 echo "<p>O caixa eletronico vai entregar as seguintes notas:</p>";
             ?>
             <ul>
@@ -57,9 +61,6 @@
                 </li>
                 <li>
                     <?="50: $fift"?>
-                </li>
-                <li>
-                    <?="20: $twenty"?>
                 </li>
                 <li>
                     <?="10: $ten"?>
